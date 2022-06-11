@@ -1,0 +1,11 @@
+{
+  "name": "wordfrequencycount",
+  "version": "1.0.0",
+  "main": "wordcountfrequency.js",
+  "license": "MIT",
+  "author": "hqweay",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "html-to-text": "^8.2.0"
+  }
+}

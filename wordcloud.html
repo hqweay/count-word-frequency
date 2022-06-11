@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="canvas-container" align="center">
+      <canvas id="canvas" width="600px" height="400px"></canvas>
+    </div>
+    <script src="https://cdn.bootcss.com/wordcloud2.js/1.1.0/wordcloud2.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <script src="https://requirejs.org/docs/release/2.3.6/r.js"></script> -->
+    <script>
+      let options = eval({
+        list: [
+          ["the", 87],
+          ["and", 66],
+          ["that", 51],
+          ["about", 36],
+          ["you", 32],
+          ["for", 31],
+          ["this", 27],
+          ["they", 24],
+          ["are", 24],
+          ["with", 22],
+          ["hello", 22],
+          ["but", 20],
+          ["think", 15],
+          ["unactionable", 13],
+          ["people", 13],
+          ["things", 13],
+          ["more", 13],
+          ["may", 11],
+          ["not", 11],
+          ["much", 10],
+          ["can", 10],
+          ["them", 10],
+          ["will", 9],
+          ["have", 9],
+          ["your", 9],
+          ["all", 8],
+          ["against", 8],
+          ["thinking", 8],
+          ["than", 8],
+          ["just", 8],
+          ["good", 8],
+          ["one", 8],
+          ["being", 8],
+          ["subjects", 8],
+          ["cool", 8],
+          ["something", 7],
+          ["like", 7],
+          ["kind", 7],
+          ["what", 7],
+          ["way", 7],
+          ["when", 7],
+          ["out", 7],
+          ["because", 7],
+          ["change", 7],
+          ["argument", 7],
+          ["which", 7],
+          ["politics", 6],
+          ["such", 6],
+          ["years", 6],
+          ["actionable", 6],
+          ["talking", 6],
+          ["might", 6],
+          ["useful", 6],
+          ["reality", 6],
+          ["lot", 6],
+          ["into", 6],
+          ["say", 6],
+          ["practical", 6],
+          ["was", 6],
+          ["issues", 6],
+          ["always", 5],
+          ["too", 5],
+          ["world", 5],
+          ["from", 5],
+          ["our", 5],
+          ["doing", 5],
+          ["even", 5],
+          ["could", 5],
+          ["there", 5],
+          ["matters", 5],
+          ["through", 5],
+          ["frameworks", 5],
+          ["almost", 5],
+          ["noticed", 5],
+          ["lead", 5],
+          ["here", 5],
+          ["would", 5],
+          ["how", 5],
+          ["comments", 4],
+          ["laws", 4],
+          ["hard", 4],
+          ["those", 4],
+          ["theories", 4],
+          ["some", 4],
+          ["any", 4],
+          ["going", 4],
+          ["having", 4],
+          ["probably", 4],
+          ["most", 4],
+          ["few", 4],
+          ["least", 4],
+          ["make", 4],
+          ["life", 4],
+          ["indeed", 4],
+          ["their", 4],
+          ["harmful", 4],
+          ["other", 4],
+          ["easy", 4],
+          ["enough", 4],
+          ["new", 4],
+        ],
+        gridSize: 16, // size of the grid in pixels
+        weightFactor: 10, // number to multiply for size of each word in the list
+        fontWeight: "normal", // 'normal', 'bold' or a callback
+        fontFamily: "Times, serif", // font to use
+        color: "random-light", // 'random-dark' or 'random-light'
+        backgroundColor: "#333", // the color of canvas
+        rotateRatio: 1, // probability for the word to rotate. 1 means always rotate
+      });
+      let canvas = document.getElementById("canvas");
+      WordCloud(canvas, options);
+    </script>
+  </body>
+</html>

@@ -85,7 +85,10 @@ function forWordCloud(config) {
   return words;
 }
 
-function forMomo(config, n) {
+function forMomo(config, start, end) {
+  if (start != undefined && end != undefined) {
+    return config.words.slice(start, end);
+  }
   return config.words.join("\n");
 }
 
@@ -117,9 +120,17 @@ function appendConfig(config, appendConfig) {
 }
 
 const axios = require("axios");
-async function fromUrl(url) {
-  let response = await axios.get(url);
-  return wordcountfrequency(htmlToText(response.data));
+function fromUrl(url) {
+  let html;
+  let done = false;
+  axios.get(url).then((response) => {
+    html = response.data;
+    done = true;
+  });
+  require("deasync").loopWhile(function () {
+    return !done;
+  });
+  return wordcountfrequency(htmlToText(html));
 }
 
 module.exports = {

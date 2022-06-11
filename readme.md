@@ -1,13 +1,16 @@
 Counting english word frequency from string, file, dir and url. Result like :
 
-```json
+```plaintext
 {
   total: 19,
-  words: [ 'hello', 'cool' ], // sorted words
-  wordCounts: { cool: 8, hello: 11 },
-  join: [Function: join]
+  words: [ 'hello', 'cool' ],
+  wordCounts: { cool: 8, hello: 11 }
 }
 ```
+
+- total: the number of deduplicated words
+- words: an array of the sorted deduplicated words
+- wordCounts: the word frequency
 
 ## API
 
@@ -21,18 +24,31 @@ Counting english word frequency from string, file, dir and url. Result like :
 
 - `forWordCloud()`
 
-  - ```json
-    // Return value example
-    [ [ 'hello', 11 ], [ 'cool', 8 ] ]
+  - // Return value example
+    
+    ```json
+    [
+      ["hello", 11],
+      ["cool", 8]
+    ]
     ```
 
-- `forMomo()`
+- `forMomo(config, start, end)`
 
-  - ```json
-    // Return value example
+  - ```javascript
+    const {fromFile} = require("./wordFrequencyCounter");
+    let articleByFileConfig = fromFile("./article/b.txt");
+    console.log(forMomo(articleByFileConfig, 0, 3));// return the top 3 words by frequency
+    console.log(forMomo(articleByFileConfig));// return all words
+    ```
+  
+  - // Return value example；To import into the Momo App(墨墨背单词).
+  
+    ```plaintext l
     abandon
     hello
     ```
+  
 
 ## example
 
@@ -51,18 +67,26 @@ let stringConfig = wordcountfrequency(
 );
 let articleByDirConfig = fromDir("./article/");
 let articleByFileConfig = fromFile("./article/b.txt");
+let urlConfig = fromUrl("https://leay.net");
 let appendConfig = fromFile("./article/c.txt");
 
-console.log(articleByFileConfig.join(appendConfig));
-console.log(forWordCloud(articleByFileConfig));
-console.log(forMomo(articleByFileConfig));
+// console.log(articleByFileConfig.join(appendConfig));
+// console.log(forWordCloud(articleByFileConfig));
+// console.log(forMomo(articleByFileConfig, 0, 3));
 
-// fromUrl("https://leay.net").then((urlConfig) => {
-//   console.log(urlConfig);
-// });
+// count word frequency of web pages from a list of urls
+const fs = require("fs");
+let lines = fs.readFileSync("bookmark/index.txt");
+lines
+  .toString()
+  .split("\n")
+  .forEach((line) => {
+    urlConfig.join(fromUrl(line));
+  });
+
+console.log(urlConfig);
 ```
 
 ## thanks
 
 - [angus-c/wordy: An embedded word frequency util](https://github.com/angus-c/wordy)
-

@@ -1,3 +1,16 @@
+const { htmlToText } = require("html-to-text");
+const fs = require("fs");
+var path = require("path");
+let stemmedWords = JSON.parse(
+  fs.readFileSync("asset/stemmedWords.json").toString()
+);
+
+var isFilterStemmedWords = true;
+
+function setFilterStemmedWords(flag) {
+  isFilterStemmedWords = flag;
+}
+
 function wordcountfrequency(text) {
   let config = {
     total: 0,
@@ -24,12 +37,16 @@ function wordcountfrequency(text) {
   };
 
   let allWords = text
-    .replace(/[a-z]+[\-|\']+[a-z]+/gi, "") // remove words with - or '
-    .replace(/[\-|\']+[a-z]+/gi, "") // remove words with - or '
+    .replace(/[a-z]+[\-|\']+[a-z]+/gi, "") // like that's
+    .replace(/[a-z]+[\-|\']+/gi, "") // like store'
+    .replace(/[\-|\']+[a-z]+/gi, "") // like 's
     .split(/[\?\!\.\,;]*[\s+–]|[\?\!\.\,;]$/); // split on ?!.,; or space
 
   allWords.forEach(function (word) {
     word = word.toLowerCase();
+    if (stemmedWords[word] && isFilterStemmedWords) {
+      word = stemmedWords[word];
+    }
     if (
       word.length >= 3 && // word must be at least 3 characters
       !/[^a-zA-ZÅåÄäâàáÖöØøÆæÉéÈèÜüÊêÛûÎî\-\']/.test(word) && // remove words with non-alphanumeric characters
@@ -53,9 +70,6 @@ function wordcountfrequency(text) {
   return config;
 }
 
-const { htmlToText } = require("html-to-text");
-const fs = require("fs");
-var path = require("path");
 function textFromDir(dir) {
   let allContent = "";
   let files = fs.readdirSync(dir);
@@ -87,9 +101,9 @@ function forWordCloud(config) {
 
 function forMomo(config, start, end) {
   if (start != undefined && end != undefined) {
-    return config.words.slice(start, end);
+    return config.words.slice(start, end).join("\r\n");
   }
-  return config.words.join("\n");
+  return config.words.join("\r\n");
 }
 
 function fromDir(dir) {
@@ -140,4 +154,5 @@ module.exports = {
   fromFile,
   forWordCloud,
   forMomo,
+  setFilterStemmedWords,
 };

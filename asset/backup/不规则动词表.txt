@@ -1,0 +1,259 @@
+abide abode abided abode abided
+arise arose arisen
+awake awoke awaked awoken
+be was been
+bear bore borne born
+beat beat beaten
+become became become
+befall befell befallen
+beget begot begotten
+begin began begun
+behold beheld beheld
+bend bent bent
+bereave bereaved bereft bereaved bereft
+beseech besought besought
+beset beset beset
+bet bet betted bet betted
+betake betook betaken
+bethink bethought bethought
+bidbade bidbidden bid
+bindboundbound
+bitebitbitten,bit
+bleedbledbled
+blendblended,blentblended,blent
+blessblessed,blestblessed,blest
+blowblewblown
+breakbrokebroken
+breedbredbred
+bringbrought brought
+broadcastbroadcast,broadcastedbroadcast,broadcasted
+buildbuiltbuilt
+burnburnt,burnedburnt,burned
+burstburstburst
+buyboughtbought
+castcastcast
+catchcaughtcaught
+chidechided,chidchided,chidden
+choosechosechosen
+cleaveclove,cleftcloven,cleft
+clingclungclung
+clotheclothed,cladclothed,clad
+comecamecome
+costcostcost
+creepcreptcrept
+crowcrowed,crewcrowed
+cutcutcut
+daredared,durstdared
+dealdealtdealt
+digdugdug
+divedived;(US)dovedived
+dodiddone
+drawdrewdrawn
+dreamdreamt,dreameddreamt,dreamed
+drinkdrankdrunk
+drivedrovedriven
+dwelldweltdwelt
+eatateeaten
+fallfellfallen
+feedfedfed
+feelfeltfelt
+fightfoughtfought
+findfoundfound
+fleefledfled
+flingflungflung
+flyflewflown
+forbear forbore forborne
+forbidforbade,forbadforbidden
+forecastforecast,forecastedforecast,forecasted
+foreknowforeknewforeknown
+foresee foresew foreseen
+foretellforetoldforetold
+forgetforgotforgotten
+forgive forgave forgiven
+forsake forsook forsaken
+forswearforsworeforsworn
+freezefrozefrozen
+gainsay gainsaidgainsaid
+getgotgot;(US)gotten
+gildgilded,giltgilded
+girdgirded,girtgirded,girt
+givegavegiven
+gowentgone
+gravegravedgraven,graved
+grindgroundground
+growgirewgrown
+hamstringhamstringed,hamstrunghamstringed,hamstrung
+hanghung,hangedhung,hanged
+havehadhad
+hearheardheard
+heaveheaved,hovehesved,hove
+hewhewedhewed,hewn
+hidehidhidden
+hithithit
+holdheldheld
+hurthurthurt
+inlayinlaidintaid
+keepkeptkept
+kneelkneltknelt
+knitknitted,knitknitted,knit
+knowknewknown
+ladeladedladen
+laylaidlaid
+leadledled
+leanlesnt,leanedlesnt,leaned
+leapleapt,leapedleapt,leaped
+learnlearnt,learnedlearnt,learned
+leaveleftleft
+lendlentlent
+letletlet
+lielaylain
+lightlit,lightedlit,lighted
+loselostlost
+makemademade
+meanmeantmeant
+meetmetmet
+meltmeltedmeited,molten
+miscast miscast miscast
+misdeal misdealtmisdealt
+misgive misgave misgiven
+mislaymislaidmislaid
+mislead misledmisled
+misspellmisspeltmisspelt
+misspendmisspentmisspent
+mistake mistook mistaken
+misunderstandmisunderstoodmisunderstood
+mowmowedmown;(US) mowed
+outbidoutbidoutbid
+outdooutdidoutdone
+outgooutwent outgone
+outgrow outgrew outgrown
+outride outrode outridden
+outrunoutranoutrun
+outshineoutshoneoutshone
+overbearoverboreoverborne
+overcastovercastovercast
+overcomeovercameovercome
+overdooverdid overdone
+overhangoverhungoverhung
+overhearoverheardoverheard
+overlay overlaidoverlaid
+overleapoverleapt,overleapedoverleapt,overleaped
+overlie overlay overlain
+overrideoverrodeoverridden
+overrun overran overun
+oversee oversaw overseen
+overshootovershotovershot
+oversleepoversleptoverslept
+overtakeovertookovertaken
+overthrowoverthrewoverthrown
+partake partook partaken
+paypaidpaid
+proveprovedproved,proven
+putputput
+quitquitted,quitquitted,quit
+readread[red]read[red]
+rebindrebound rebound
+rebuild rebuilt rebuilt
+recastrecastrecast
+redoredidredone
+relayrelaidrelaid
+remakeremaderemade
+rendrentrent
+repayrepaidrepaid
+rerunreranrerun
+resetresetreset
+retellretoldretold
+rewrite rewrote rewritten
+ridred,reddedrid,ridded
+rideroderidden
+ringrangrung
+riseroserisen
+riverivedriven,rived
+runranrun
+sawsawedsawn,sawed
+saysaidsaid
+seesawseen
+seeksoughtsought
+sellsoldsold
+sendsentsent
+setsetset
+sewsewedsewn,sewed
+shakeshookshaken
+shaveshavedshaved,shaven
+shearsheared sheared,shorn
+shedshedshed
+shineshoneshone
+shoeshodshod
+shootshotshot
+showshowedshown,showed
+shrinkshrank,shrunkshrunk,shrunken
+shriveshrove,shrivedshriven,shrived
+shutshutshut
+singsang,sungsung
+sinksank,sunksunk;sunken
+sitsatsat
+slayslewslain
+sleepsleptslept
+slideslidslid
+slingslungslung
+slinkslunkslunk
+slitslitslit
+smellsmelt;smelledsmelt;smelled
+smitesmotesmitten
+sowsowedsown,sowed
+speakspokespoken
+speedsped,speededsped,speeded
+spellspelt,spelledspelt,spelled
+spendspentspent
+spillspilt,spilledspilt,spilled
+spinspun,spanspun
+spitspat,spitspat,spit
+spoilspoilt,spoiledspoilt,spoiled
+spreadspreadspread
+springsprang,sprungsprung
+standstoodstood
+stavestaved,stovestaved,stove
+stealstolestolen
+stickstuckstuck
+stingstungstung
+stinkstank,stunkstunk
+strewstrewed strewn,strewed
+stridestrodestridden,strid
+strikestruckstruck,stricken
+stringstrungstrung
+strivestrovestriven
+swearsworesworn
+sweepsweptswept
+swellswelled swollen,swelled
+swimswamswum
+swingswungswung
+taketooktaken
+teachtaughttaught
+teartoretorn
+telltoldtold
+thinkthought thought
+thrivethrove,ghrivedthriven,thrived
+throwthrewthrown
+thrustthrustthrust
+treadtrodtrodden,trod
+unbendunbentunbent
+unbindunbound unbound
+underbidunderbidunderbid,underbidden
+undergo underwentundergone
+understandunderstoodunderstood
+undertakeundertookundertaken
+undoundidundone
+upsetupsetupset
+wakewoke,wakedwoken,waked
+waylaywaylaid waylaid
+wearworeworn
+weavewovewoven
+weepweptwept
+winwonwon
+windwoundwound
+withdrawwithdrewwithdrawn
+withholdwithheldwithheld
+withstandwithstoodwithstood
+workworked,wroughtworked,wrought
+wringwrungwrung
+writewrotewritte

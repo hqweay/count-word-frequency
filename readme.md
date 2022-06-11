@@ -14,6 +14,10 @@ Counting english word frequency from string, file, dir and url. Result like :
 
 ## API
 
+- `setFilterStemmedWords(boolean)`
+
+  - controls whether to convert words into prototypes and then count word frequencies
+
 - `wordcountfrequency()`
 
 - `fromDir()`
@@ -41,14 +45,14 @@ Counting english word frequency from string, file, dir and url. Result like :
     console.log(forMomo(articleByFileConfig, 0, 3));// return the top 3 words by frequency
     console.log(forMomo(articleByFileConfig));// return all words
     ```
-  
+
   - // Return value example；To import into the Momo App(墨墨背单词).
-  
+
     ```plaintext l
     abandon
     hello
     ```
-  
+
 
 ## example
 
@@ -61,6 +65,8 @@ const {
   forWordCloud,
   forMomo,
 } = require("./wordFrequencyCounter");
+
+setFilterStemmedWords(true); //controls whether to convert words into prototypes and then count word frequencies
 
 let stringConfig = wordcountfrequency(
   "what's your name? and what is your name?"
@@ -87,6 +93,17 @@ lines
 console.log(urlConfig);
 ```
 
+## one more thing
+
+- `asset/stemmedWords.json`：A simple corpus of word prototypes
+
+```javascript
+console.log(stemmedWords["redone"]) 
+// output redo
+```
+
 ## thanks
 
 - [angus-c/wordy: An embedded word frequency util](https://github.com/angus-c/wordy)
+- [python-chinese\] 如何得到单词的原形？](https://groups.google.com/g/python-cn/c/2iqdCcdaG64)
+- [DataCluster/wordmark: 一个单词的不同形式划为原型的对照表](https://github.com/DataCluster/wordmark)

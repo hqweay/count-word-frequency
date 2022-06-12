@@ -1,5 +1,5 @@
-// const fs = require("fs");
-// fs.readFileSync("Irregular.txt")
+const fs = require("fs");
+// fs.readFileSync("asset/backup/Irregular(已经删除重复单词).txt")
 //   .toString()
 //   .split(";")
 //   .forEach((line) => {
@@ -27,14 +27,29 @@
 //     }
 //   });
 
-// let steemdWrod = {};
-// fs.readFileSync("asset/stemmedWord.csv")
-//   .toString()
-//   .split("\n")
-//   .forEach((line) => {
-//     if (line != undefined && "" != line.trim()) {
-//       words = line.split(",");
-//       steemdWrod[words[0].trim()] = words[1].trim();
-//     }
-//   });
-// console.log(JSON.stringify(steemdWrod));
+let steemdWrod = {};
+fs.readFileSync("asset/backup/Irregular+mark.csv")
+  .toString()
+  .split("\n")
+  .forEach((line) => {
+    if (line != undefined && "" != line.trim()) {
+      words = line.split(",");
+      // if (steemdWrod[words[0].trim()] == undefined) {
+      // steemdWrod[words[0].trim()] = words[1].trim();
+      // } else {
+      if (!steemdWrod[words[0].trim()]) {
+        steemdWrod[words[0].trim()] = [words[1].trim()];
+      } else {
+        if (steemdWrod[words[0].trim()].includes(words[1].trim())) {
+          // console.log(words[0].trim() + "," + words[1].trim());
+        } else {
+          steemdWrod[words[0].trim()].push(words[1].trim());
+        }
+      }
+
+      // }
+    }
+  });
+
+console.log(JSON.stringify(steemdWrod));
+// console.log(JSON.parse(fs.readFileSync("asset/stemmedWords.json").toString()));

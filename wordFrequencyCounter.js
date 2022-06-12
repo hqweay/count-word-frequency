@@ -1,8 +1,8 @@
 const { htmlToText } = require("html-to-text");
 const fs = require("fs");
-var path = require("path");
+const path = require("path");
 let stemmedWords = JSON.parse(
-  fs.readFileSync("asset/stemmedWords.json").toString()
+  fs.readFileSync("asset/stemmedWords.v2.json").toString()
 );
 
 var isFilterStemmedWords = true;
@@ -44,18 +44,25 @@ function wordcountfrequency(text) {
 
   allWords.forEach(function (word) {
     word = word.toLowerCase();
-    if (stemmedWords[word] && isFilterStemmedWords) {
-      word = stemmedWords[word];
-    }
+
     if (
       word.length >= 3 && // word must be at least 3 characters
       !/[^a-zA-ZÅåÄäâàáÖöØøÆæÉéÈèÜüÊêÛûÎî\-\']/.test(word) && // remove words with non-alphanumeric characters
       /([a-z]+)/gi.test(word) // only words with letters
     ) {
-      config.wordCounts[word]
-        ? config.wordCounts[word]++
-        : (config.wordCounts[word] = 1);
-      config.total++;
+      if (isFilterStemmedWords && stemmedWords[word]) {
+        stemmedWords[word].forEach((stemmedWord) => {
+          config.wordCounts[stemmedWord]
+            ? config.wordCounts[stemmedWord]++
+            : (config.wordCounts[stemmedWord] = 1);
+          config.total++;
+        });
+      } else {
+        config.wordCounts[word]
+          ? config.wordCounts[word]++
+          : (config.wordCounts[word] = 1);
+        config.total++;
+      }
     }
   });
 

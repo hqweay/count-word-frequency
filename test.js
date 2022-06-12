@@ -11,15 +11,17 @@ const fs = require("fs");
 const assert = require("assert");
 
 // setFilterStemmedWords(false);
-// setFilterStemmedWords(true);
 
 let stringConfig = wordcountfrequency(
   "what's your name? and what is your name?"
 );
-let articleByDirConfig = fromDir("./article/");
-let articleByFileConfig = fromFile("./article/b.txt");
-let urlConfig = fromUrl("https://leay.net");
-let appendConfig = fromFile("./article/c.txt");
+
+let example01 = fromFile("article/test/example01.txt");
 
 // 测试单词还原为原型是否成功
-assert.equal(forMomo(appendConfig, 0, 2000), "hello\r\nkid\r\nleave\r\nleaf");
+assert.equal(forMomo(example01), "hello\r\nkid\r\nleave\r\nleaf");
+
+// 测试单词不还原为原型
+setFilterStemmedWords(false);
+example01 = fromFile("article/test/example01.txt");
+assert.equal(forMomo(example01), "hello\r\nkidding\r\nkids\r\nleaves");

@@ -29,25 +29,26 @@ let appendConfig = fromFile("./article/c.txt");
 
 // count word frequency of web pages from a list of urls
 
-// let lines = fs.readFileSync("bookmark/index.txt");
-// lines
-//   .toString()
-//   .split("\n")
-//   .forEach((line) => {
-//     if (line != undefined && "" != line.trim()) {
-//       urlConfig.join(fromUrl(line));
-//     }
-//   });
-// fs.writeFileSync(
-//   "./bookmark/result.txt",
-//   forMomo(urlConfig, 900, 2000).toString()
-// );
-
+let lines = fs.readFileSync("bookmark/paulgraham.txt");
+lines
+  .toString()
+  .split("\n")
+  .forEach((line) => {
+    if (line != undefined && "" != line.trim()) {
+      urlConfig.join(fromUrl(line));
+    }
+  });
 fs.writeFileSync(
-  "asset/read/01.txt",
-  "# " + urlConfig["origin"] + "\r\n" + forMomo(urlConfig, 0, 2000).toString()
+  "./bookmark/result_paulgraham.txt",
+  // forMomo(urlConfig, 900, 2000).toString()
+  JSON.stringify(forWordCloud(urlConfig))
 );
 
-console.log(forWordCloud(urlConfig));
+// fs.writeFileSync(
+//   "asset/read/01.txt",
+//   "# " + urlConfig["origin"] + "\r\n" + forMomo(urlConfig, 0, 2000).toString()
+// );
 
-console.log(getLemma("worse"));
+// console.log(forWordCloud(urlConfig));
+
+// console.log(getLemma("worse"));

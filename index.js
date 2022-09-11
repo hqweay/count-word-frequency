@@ -39,7 +39,7 @@ lines
     }
   });
 fs.writeFileSync(
-  "./bookmark/result_paulgraham.txt",
+  "./bookmark/result_paulgraham.json",
   // forMomo(urlConfig, 900, 2000).toString()
   JSON.stringify(forWordCloud(urlConfig))
 );

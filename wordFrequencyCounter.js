@@ -156,6 +156,10 @@ function fromUrl(url) {
   return result;
 }
 
+function getLemma(word){
+  return stemmedWords[word];
+}
+
 module.exports = {
   wordcountfrequency,
   fromDir,
@@ -164,4 +168,5 @@ module.exports = {
   forWordCloud,
   forMomo,
   setFilterStemmedWords,
+  getLemma,
 };

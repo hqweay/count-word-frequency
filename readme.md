@@ -52,6 +52,15 @@ Counting english word frequency from string, file, dir and url. Result like :
     abandon
     hello
     ```
+  
+- `getLemma(word)`
+
+  - ```javascript
+    console.log(getLemma("worse"));
+    
+    // return
+    // [ 'bad', 'badly' ]
+    ```
 
 
 ## example
@@ -64,6 +73,7 @@ const {
   fromFile,
   forWordCloud,
   forMomo,
+  getLemma
 } = require("./wordFrequencyCounter");
 
 setFilterStemmedWords(true); //controls whether to convert words into prototypes and then count word frequencies
@@ -91,11 +101,12 @@ lines
   });
 
 console.log(urlConfig);
+console.log(getLemma("worse"));
 ```
 
 ## one more thing
 
-- `asset/stemmedWords.json`：A simple corpus of word prototypes
+- `asset/stemmedWords.v3.json`：A simple corpus of word prototypes
 
 ```javascript
 console.log(stemmedWords["redone"]) 

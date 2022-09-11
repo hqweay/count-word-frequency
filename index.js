@@ -6,6 +6,7 @@ const {
   forWordCloud,
   forMomo,
   setFilterStemmedWords,
+  getLemma
 } = require("./wordFrequencyCounter");
 const fs = require("fs");
 
@@ -44,5 +45,9 @@ let appendConfig = fromFile("./article/c.txt");
 
 fs.writeFileSync(
   "asset/read/01.txt",
-  "# " + urlConfig["origin"] + "\r\n" + forMomo(urlConfig, 900, 2000).toString()
+  "# " + urlConfig["origin"] + "\r\n" + forMomo(urlConfig, 0, 2000).toString()
 );
+
+console.log(forWordCloud(urlConfig));
+
+console.log(getLemma("worse"));

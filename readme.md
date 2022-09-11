@@ -107,3 +107,5 @@ console.log(stemmedWords["redone"])
 - [angus-c/wordy: An embedded word frequency util](https://github.com/angus-c/wordy)
 - [python-chinese\] 如何得到单词的原形？](https://groups.google.com/g/python-cn/c/2iqdCcdaG64)
 - [DataCluster/wordmark: 一个单词的不同形式划为原型的对照表](https://github.com/DataCluster/wordmark)
+- [skywind3000/ECDICT: Free English to Chinese Dictionary Database](https://github.com/skywind3000/ECDICT)
+

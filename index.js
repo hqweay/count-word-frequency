@@ -17,7 +17,9 @@ let stringConfig = wordcountfrequency(
 );
 let articleByDirConfig = fromDir("./article/");
 let articleByFileConfig = fromFile("./article/b.txt");
-let urlConfig = fromUrl("https://leay.net");
+let urlConfig = fromUrl(
+  "https://waitbutwhy.com/2014/06/taming-mammoth-let-peoples-opinions-run-life.html"
+);
 let appendConfig = fromFile("./article/c.txt");
 
 // console.log(articleByFileConfig.join(appendConfig));
@@ -40,4 +42,7 @@ let appendConfig = fromFile("./article/c.txt");
 //   forMomo(urlConfig, 900, 2000).toString()
 // );
 
-console.log(forMomo(appendConfig, 0, 2000));
+fs.writeFileSync(
+  "asset/read/01.txt",
+  "# " + urlConfig["origin"] + "\r\n" + forMomo(urlConfig, 900, 2000).toString()
+);

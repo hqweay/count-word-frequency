@@ -28,26 +28,25 @@ const fs = require("fs");
 //   });
 
 let steemdWrod = {};
-fs.readFileSync("asset/backup/Irregular+mark.csv")
+fs.readFileSync("asset/backup/lemma.en.txt")
   .toString()
   .split("\n")
   .forEach((line) => {
-    if (line != undefined && "" != line.trim()) {
-      words = line.split(",");
-      // if (steemdWrod[words[0].trim()] == undefined) {
-      // steemdWrod[words[0].trim()] = words[1].trim();
-      // } else {
-      if (!steemdWrod[words[0].trim()]) {
-        steemdWrod[words[0].trim()] = [words[1].trim()];
-      } else {
-        if (steemdWrod[words[0].trim()].includes(words[1].trim())) {
-          // console.log(words[0].trim() + "," + words[1].trim());
+    if (line != undefined && "" != line.trim() && line.includes("->")) {
+      // console.log(line);
+      words = line.split("->");
+      originWord = words[0].split("/")[0].trim();
+      words[1].split(",").forEach((newWord) => {
+        newWord = newWord.trim();
+        if (!steemdWrod[newWord]) {
+          steemdWrod[newWord] = [originWord];
         } else {
-          steemdWrod[words[0].trim()].push(words[1].trim());
+          if (steemdWrod[newWord].includes(originWord)) {
+          } else {
+            steemdWrod[newWord].push(originWord);
+          }
         }
-      }
-
-      // }
+      });
     }
   });
 

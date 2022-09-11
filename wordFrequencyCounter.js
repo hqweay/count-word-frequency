@@ -2,7 +2,7 @@ const { htmlToText } = require("html-to-text");
 const fs = require("fs");
 const path = require("path");
 let stemmedWords = JSON.parse(
-  fs.readFileSync("asset/stemmedWords.v2.json").toString()
+  fs.readFileSync("asset/stemmedWords.v3.json").toString()
 );
 
 var isFilterStemmedWords = true;
@@ -151,7 +151,9 @@ function fromUrl(url) {
   require("deasync").loopWhile(function () {
     return !done;
   });
-  return wordcountfrequency(htmlToText(html));
+  let result = wordcountfrequency(htmlToText(html));
+  result["origin"] = url;
+  return result;
 }
 
 module.exports = {

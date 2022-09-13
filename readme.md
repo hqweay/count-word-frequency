@@ -113,6 +113,10 @@ console.log(stemmedWords["redone"])
 // output redo
 ```
 
+## wordcloud
+
+- see `wordcloud.html`
+
 ## thanks
 
 - [angus-c/wordy: An embedded word frequency util](https://github.com/angus-c/wordy)

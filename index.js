@@ -18,9 +18,10 @@ let stringConfig = wordcountfrequency(
 );
 let articleByDirConfig = fromDir("./article/");
 let articleByFileConfig = fromFile("./article/b.txt");
-let urlConfig = fromUrl(
-  "https://waitbutwhy.com/2014/06/taming-mammoth-let-peoples-opinions-run-life.html"
-);
+// let urlConfig = fromUrl(
+//   "https://waitbutwhy.com/2014/06/taming-mammoth-let-peoples-opinions-run-life.html"
+// );
+let urlConfig = wordcountfrequency("");
 let appendConfig = fromFile("./article/c.txt");
 
 // console.log(articleByFileConfig.join(appendConfig));
@@ -35,13 +36,20 @@ lines
   .split("\n")
   .forEach((line) => {
     if (line != undefined && "" != line.trim()) {
-      urlConfig.join(fromUrl(line));
+      urlConfig.join(fromUrl(line.trim()));
     }
   });
 fs.writeFileSync(
   "./bookmark/result_paulgraham.json",
   // forMomo(urlConfig, 900, 2000).toString()
-  JSON.stringify(forWordCloud(urlConfig))
+  // JSON.stringify(forWordCloud(urlConfig))
+  JSON.stringify(urlConfig)
+);
+
+fs.writeFileSync(
+  "./bookmark/result_momo_paulgraham.txt",
+  // forMomo(urlConfig, 900, 2000).toString()
+  forMomo(urlConfig)
 );
 
 // fs.writeFileSync(

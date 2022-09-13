@@ -141,7 +141,9 @@ function appendConfig(config, appendConfig) {
 }
 
 const axios = require("axios");
+axios.defaults.timeout = 30000;
 function fromUrl(url) {
+  console.log("开始解析：" + url);
   let html;
   let done = false;
   axios.get(url).then((response) => {
